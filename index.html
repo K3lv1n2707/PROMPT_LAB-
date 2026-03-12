@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Theme Color for Mobile Browsers (iOS/Android) -->
+    <meta name="theme-color" content="#050505">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>PROMPT LAB</title>
+    <link rel="stylesheet" href="styles.css?v=2">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="preloader-bg"></div>
+        <div class="loader-content">
+            <div class="loader-icon">&gt;_</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+            <p>PROMPT LAB...</p>
+        </div>
+    </div>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div style="display:flex; flex-direction:column; line-height:1; font-size:1.2rem;">
+                    <span>Prompt</span>
+                    <span style="display:flex; align-items:center; gap:0.3rem;">Lab <span class="logo-icon"
+                            style="font-family: monospace; font-weight: bold;">&gt;_</span></span>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="#que-hacemos">Qué Hacemos</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#paquetes">Paquetes</a>
+                <a href="#quienes-somos">Quiénes Somos</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+            <div class="menu-actions">
+                <a href="https://wa.me/593969794784" target="_blank" class="btn-cta">SOLICITAR</a>
+                <button class="menu-toggle" aria-label="Abrir Menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-container">
+
+            <div class="hero-text">
+                <div class="pill-label"
+                    style="display:inline-block; border:1px solid #333; padding: 5px 15px; border-radius:20px; margin-bottom: 20px; font-size: 0.8rem; color: #888;">
+                    <i class="fas fa-rocket" style="color:var(--accent-primary); margin-right:5px;"></i> AI STUDIO
+                </div>
+
+                <h1>CREAMOS SISTEMAS, <br> ANUNCIOS Y CONTENIDO <br> <span>CON IA</span></h1>
+
+                <p class="subheadline">
+                    Automatizaciones, videos, anuncios, avatares e influencers virtuales — rápido, moderno y listo
+                    para usar.
+                </p>
+
+                <div class="features-row">
+                    <!-- Feature 1 -->
+                    <div class="feature-pill">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Rápido</h4>
+                            <span>Listo en días</span>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="feature-pill">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Moderno</h4>
+                            <span>Con IA avanzada</span>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/593969794784" target="_blank" class="btn-hero">
+                    <i class="fas fa-wand-magic-sparkles"></i>
+                    SOLICITA TU SISTEMA IA &rightarrow;
+                </a>
+            </div>
+
+            <div class="hero-visual">
+                <!-- The glowing line effect -->
+                <div class="visual-glow-line"></div>
+
+                <!-- Silhouette/Figure placeholder -->
+                <div style="z-index:2; height:100%; display:flex; align-items:flex-end;">
+                    <!-- Simple silhouette shape logic via CSS or Image can go here -->
+                    <i class="fas fa-user"
+                        style="font-size:10rem; color:#000; filter:drop-shadow(0 0 10px rgba(190,243,44,0.5));"></i>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Qué Hacemos Section (Redesigned) -->
+    <section id="que-hacemos">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title" style="margin-bottom: 0;">QUÉ <span>HACEMOS</span></h2>
+                <div class="section-underline"></div>
+            </div>
+
+            <div class="split-section">
+                <!-- Left: Content -->
+                <div class="split-content">
+                    <div class="pill-label">
+                        <i class="fas fa-layer-group"></i> PRODUCTION & AI
+                    </div>
+                    <h3>CONTENIDO VISUAL <br> DE ALTO IMPACTO</h3>
+                    <p>
+                        Creamos activos digitales que capturan la atención. Desde la conceptualización hasta el
+                        renderizado final, utilizamos modelos de IA profesionales para ti o tu marca con contenido hasta
+                        en 4k.
+                    </p>
+
+                    <div class="check-list">
+                        <div class="check-item"><i class="fas fa-check-circle"></i> Videos Publicitarios</div>
+                        <div class="check-item"><i class="fas fa-check-circle"></i> Fotografía Profesional</div>
+                        <div class="check-item"><i class="fas fa-check-circle"></i> Posters</div>
+                        <div class="check-item"><i class="fas fa-check-circle"></i> Avatares Virtuales</div>
+                        <div class="check-item"><i class="fas fa-check-circle"></i> Diseño Web 3.0</div>
+                        <div class="check-item"><i class="fas fa-check-circle"></i> Branding con IA</div>
+                    </div>
+                </div>
+
+                <!-- Right: Visual -->
+                <div class="split-visual">
+                    <!-- Placeholder for the "Interface" view from reference -->
+                    <i class="fas fa-photo-film"
+                        style="font-size: 8rem; color: var(--accent-primary); filter: drop-shadow(0 0 20px rgba(190,243,44,0.6));"></i>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section id="servicios" style="background: rgba(255,255,255,0.02);">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title" style="margin-bottom: 0;">NUESTROS <span>SERVICIOS</span></h2>
+                <div class="section-underline"></div>
+            </div>
+
+            <div class="servicios-grid">
+
+                <div class="servicio-card">
+                    <div class="servicio-icon"><i class="fas fa-video"></i></div>
+                    <h3>Video</h3>
+                    <p>Producción audiovisual con IA generativa.</p>
+                </div>
+
+                <div class="servicio-card">
+                    <div class="servicio-icon"><i class="fas fa-camera"></i></div>
+                    <h3>Fotografía</h3>
+                    <p>Sesiones virtuales fotorrealistas.</p>
+                </div>
+
+                <div class="servicio-card">
+                    <div class="servicio-icon"><i class="fas fa-bullhorn"></i></div>
+                    <h3>Anuncio</h3>
+                    <p>Creatividad publicitaria de alto impacto.</p>
+                </div>
+
+                <div class="servicio-card">
+                    <div class="servicio-icon"><i class="fas fa-image"></i></div>
+                    <h3>Poster</h3>
+                    <p>Arte gráfico y diseño de carteles.</p>
+                </div>
+
+                <div class="servicio-card">
+                    <div class="servicio-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Sitio Web</h3>
+                    <p>Desarrollo web moderno y responsivo.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Paquetes Section -->
+    <section id="paquetes">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title" style="margin-bottom: 0;">NUESTROS <span>PAQUETES</span></h2>
+                <div class="section-underline"></div>
+            </div>
+
+            <div class="paquetes-grid">
+                <!-- Package 1: Producción Audiovisual -->
+                <div class="paquete-card">
+                    <div class="paquete-logo">
+                        <div
+                            style="display:flex; flex-direction:column; line-height:1; font-size:1.8rem; font-family:var(--font-main); font-weight:800;">
+                            <span>Prompt</span>
+                            <span style="display:flex; align-items:center; gap:0.3rem;">Lab <span class="logo-icon"
+                                    style="font-family: monospace; font-weight: bold;">&gt;_</span></span>
+                        </div>
+                    </div>
+
+                    <h3 class="paquete-title">Producción Audiovisual con alto impacto</h3>
+
+                    <h4 class="paquete-subtitle">Contenido con IA</h4>
+
+                    <div class="paquete-price-section">
+                        <div class="price-desde">DESDE</div>
+                        <div class="price-value">$150</div>
+                        <div class="price-calidad">VIDEO<br><span>FUL&zwnj;LHD / 4K</span></div>
+                    </div>
+
+                    <div class="paquete-features list-blocks">
+                        <div class="feat-block">
+                            <i class="fas fa-film"></i>
+                            <div class="block-text">Producción<br>audiovisual</div>
+                        </div>
+                        <div class="feat-block">
+                            <i class="fas fa-lightbulb"></i>
+                            <div class="block-text">Producciones creativas<br>optimizadas con IA</div>
+                        </div>
+                        <div class="feat-block">
+                            <i class="fas fa-hashtag"></i>
+                            <div class="block-text">Contenido<br>para redes</div>
+                        </div>
+                        <div class="feat-block">
+                            <i class="fas fa-building"></i>
+                            <div class="block-text">Videos<br>corporativos</div>
+                        </div>
+                    </div>
+
+                    <div class="paquete-footer-text">
+                        No somos una agencia.<br>Somos el nuevo concepto.
+                    </div>
+
+                    <a href="#contacto" class="btn-hero btn-paquete">SOLICITAR AHORA</a>
+                </div>
+
+                <!-- Package 2: Contenido con IA -->
+                <div class="paquete-card paquete-verde">
+                    <div class="paquete-logo">
+                        <div
+                            style="display:flex; flex-direction:column; line-height:1; font-size:1.8rem; font-family:var(--font-main); font-weight:800;">
+                            <span>Prompt</span>
+                            <span style="display:flex; align-items:center; gap:0.3rem;">Lab <span class="logo-icon"
+                                    style="font-family: monospace; font-weight: bold;">&gt;_</span></span>
+                        </div>
+                    </div>
+
+                    <h4 class="paquete-subtitle" style="font-size:2.5rem; margin-bottom: 1rem; line-height: 1;">
+                        Contenido<br>con IA</h4>
+
+                    <div class="paquete-price-section"
+                        style="border-bottom:none; margin-bottom: 1rem; padding-bottom: 0;">
+                        <div class="price-desde">PACK DESDE</div>
+                        <div class="price-value">$200</div>
+                        <div class="price-calidad">IMAGENES<br><span>FUL&zwnj;LHD / 4K</span></div>
+                    </div>
+
+                    <div class="paquete-features list-blocks">
+                        <div class="feat-block">
+                            <i class="fas fa-certificate"></i>
+                            <div class="block-text">Branding<br>estratégico</div>
+                        </div>
+                        <div class="feat-block">
+                            <i class="fas fa-microchip"></i>
+                            <div class="block-text">Inteligencia<br>Artificial aplicada</div>
+                        </div>
+                        <div class="feat-block">
+                            <i class="fas fa-video"></i>
+                            <div class="block-text">Producción<br>de alto nivel</div>
+                        </div>
+                    </div>
+
+                    <div class="paquete-footer-text">
+                        No somos una agencia.<br>Somos el nuevo concepto.
+                    </div>
+
+                    <a href="https://wa.me/593969794784" target="_blank" class="btn-hero btn-paquete">SOLICITAR
+                        AHORA</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Quienes Somos Section -->
+    <section id="quienes-somos" style="background: rgba(0,0,0,0.3);">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title" style="margin-bottom: 0;">QUIÉNES <span>SOMOS</span></h2>
+                <div class="section-underline"></div>
+            </div>
+
+            <div class="team-layout">
+                <!-- Row 1: 2 items -->
+                <div class="team-row">
+                    <div class="team-card">
+                        <div class="team-photo-placeholder"><i class="fas fa-user"></i></div>
+                        <h3>Nombre</h3>
+                        <p>Descripción del puesto</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-photo-placeholder"><i class="fas fa-user"></i></div>
+                        <h3>Nombre</h3>
+                        <p>Descripción del puesto</p>
+                    </div>
+                </div>
+
+                <!-- Row 2: 3 items -->
+                <div class="team-row">
+                    <div class="team-card">
+                        <div class="team-photo-placeholder"><i class="fas fa-user"></i></div>
+                        <h3>Nombre</h3>
+                        <p>Descripción del puesto</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-photo-placeholder"><i class="fas fa-user"></i></div>
+                        <h3>Nombre</h3>
+                        <p>Descripción del puesto</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-photo-placeholder"><i class="fas fa-user"></i></div>
+                        <h3>Nombre</h3>
+                        <p>Descripción del puesto</p>
+                    </div>
+                </div>
+
+                <!-- Row 3: 3 items -->
+                <div class="team-row">
+                    <div class="team-card">
+                        <div class="team-photo-placeholder"><i class="fas fa-user"></i></div>
+                        <h3>Nombre</h3>
+                        <p>Descripción del puesto</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-photo-placeholder"><i class="fas fa-user"></i></div>
+                        <h3>Nombre</h3>
+                        <p>Descripción del puesto</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-photo-placeholder"><i class="fas fa-user"></i></div>
+                        <h3>Nombre</h3>
+                        <p>Descripción del puesto</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto">
+        <div class="container contacto-container">
+            <h2 class="section-title">CONECTA CON <span>NOSOTROS</span></h2>
+            <p>¿Listo para innovar? Síguenos en nuestras redes o escríbenos.</p>
+
+            <div class="social-buttons">
+                <a href="https://wa.me/593969794784" target="_blank" class="social-btn"><i
+                        class="fab fa-whatsapp"></i></a>
+                <a href="https://facebook.com" target="_blank" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/promptlabgye/?e=205e5b0e-cd8b-479e-a3c0-9f92a6dde452&g=5"
+                    target="_blank" class="social-btn"><i class="fab fa-instagram"></i></a>
+                <a href="https://tiktok.com" target="_blank" class="social-btn"><i class="fab fa-tiktok"></i></a>
+            </div>
+
+            <br><br>
+            <a href="mailto:contacto@promptlab.com" class="btn-cta"
+                style="display:inline-block; margin-top:2rem;">ENVIAR EMAIL</a>
+        </div>
+    </section>
+
+    <footer style="text-align:center; padding: 2rem; border-top: 1px solid #222; margin-top: 2rem; color: #555;">
+        <p>&copy; 2026 PROMPT LAB. Todos los derechos reservados.</p>
+    </footer>
+
+    <div id="floating-bg"></div>
+    <script>
+        // Global reference for startup sound
+        let playStartupSound = () => { };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            function spawnSymbols(containerId, count, isRightSideOnly, startDelay) {
+                const container = document.getElementById(containerId);
+                if (!container) return;
+
+                const placedSymbols = [];
+                const maxAttempts = 100;
+
+                for (let i = 0; i < count; i++) {
+                    const span = document.createElement('span');
+                    span.classList.add('floating-symbol');
+                    span.textContent = '>_';
+
+                    const sizeRem = 0.8 + Math.random() * 1.5;
+                    span.style.fontSize = `${sizeRem}rem`;
+
+                    let leftPos, topPos, isValid, attempts = 0;
+                    do {
+                        isValid = true;
+                        if (isRightSideOnly) {
+                            leftPos = 45 + Math.random() * 50;
+                        } else {
+                            leftPos = Math.random() * 92;
+                        }
+                        topPos = Math.random() * 92;
+
+                        const centerX = 50, centerY = 50;
+                        const distToCenter = Math.sqrt(Math.pow(leftPos - centerX, 2) + Math.pow(topPos - centerY, 2));
+
+                        // For preloader, keep center clear.
+                        if (containerId === 'preloader-bg' && distToCenter < 18) {
+                            isValid = false;
+                        } else {
+                            const safeDistance = sizeRem * 3.5;
+                            for (const p of placedSymbols) {
+                                const dx = leftPos - p.x, dy = topPos - p.y;
+                                if (Math.sqrt(dx * dx + dy * dy) < (safeDistance + p.size * 2)) {
+                                    isValid = false;
+                                    break;
+                                }
+                            }
+                        }
+                        attempts++;
+                    } while (!isValid && attempts < maxAttempts);
+
+                    if (isValid) {
+                        placedSymbols.push({ x: leftPos, y: topPos, size: sizeRem });
+                        span.style.left = `${leftPos}%`;
+                        span.style.top = `${topPos}%`;
+                        const duration = 15 + Math.random() * 25;
+                        span.style.animation = `float ${duration}s infinite linear`;
+
+                        // Staggered delay + base start delay
+                        const delay = startDelay + (i * 0.15) + Math.random() * 0.5;
+                        span.style.animationDelay = `${delay}s`;
+
+                        container.appendChild(span);
+                    }
+                }
+            }
+
+            // Preloader: full, immediate
+            spawnSymbols('preloader-bg', 35, false, 0.5);
+
+            // Home: right side only, delayed to reveal after preloader
+            spawnSymbols('floating-bg', 25, true, 2.8);
+
+            /* --- PS5 Audio Audio System --- */
+            const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+            // Resume context helper
+            // We'll also try to resume on scroll/wheel in case user scrolls first
+            const resumeAudio = () => {
+                if (audioCtx.state === 'suspended') {
+                    audioCtx.resume();
+                }
+            };
+            ['click', 'keydown', 'touchstart', 'scroll', 'wheel'].forEach(evt => {
+                document.addEventListener(evt, resumeAudio, { passive: true });
+            });
+
+            // 1. Startup Sound (High-Fidelity PS5 Simulation)
+            window.playStartupSound = () => {
+                resumeAudio();
+                const t = audioCtx.currentTime;
+
+                // --- Layer 1: The "Deep Breath" (Sub Bass) ---
+                const subOsc = audioCtx.createOscillator();
+                const subGain = audioCtx.createGain();
+                subOsc.type = 'sine';
+                subOsc.frequency.setValueAtTime(60, t); // Deep B1
+                subOsc.frequency.exponentialRampToValueAtTime(120, t + 4.0); // Slight rise
+
+                // REDUCED VOLUME (Further lowered)
+                subGain.gain.setValueAtTime(0, t);
+                subGain.gain.linearRampToValueAtTime(0.1, t + 1.5); // Was 0.2
+                subGain.gain.exponentialRampToValueAtTime(0.001, t + 6.0); // Long fade out
+
+                subOsc.connect(subGain);
+                subGain.connect(audioCtx.destination);
+                subOsc.start(t);
+                subOsc.stop(t + 7.0);
+
+                // --- Layer 2: The "Orchestral Swell" (Filtered Sawtooths) ---
+                // Simulates strings/choir rising
+                const chordFreqs = [110, 164.81, 220, 277.18, 329.63]; // A major 9th
+                const swellFilter = audioCtx.createBiquadFilter();
+                swellFilter.type = 'lowpass';
+                swellFilter.Q.value = 2; // Resonance for that "sweeping" sound
+                swellFilter.frequency.setValueAtTime(200, t);
+                swellFilter.frequency.exponentialRampToValueAtTime(3000, t + 2.5); // The "Opening" effect
+
+                const swellMasterGain = audioCtx.createGain();
+                // REDUCED VOLUME (Further lowered)
+                swellMasterGain.gain.setValueAtTime(0, t);
+                swellMasterGain.gain.linearRampToValueAtTime(0.05, t + 2.0); // Was 0.1
+                swellMasterGain.gain.exponentialRampToValueAtTime(0.001, t + 6.0);
+
+                swellMasterGain.connect(audioCtx.destination);
+                swellFilter.connect(swellMasterGain);
+
+                chordFreqs.forEach((freq, i) => {
+                    const osc = audioCtx.createOscillator();
+                    osc.type = 'sawtooth'; // Rich timbre
+
+                    // Detune for orchestral thickness
+                    osc.frequency.setValueAtTime(freq, t);
+                    osc.detune.setValueAtTime((Math.random() * 20) - 10, t);
+
+                    osc.connect(swellFilter);
+                    osc.start(t);
+                    osc.stop(t + 7.0);
+                });
+
+                // --- Layer 3: The "Angelic Sparkle" (High Sine Cluster) ---
+                // The magical high-pitch shimmer at the peak
+                const sparkleFreqs = [1108.73, 1318.51, 1661.22, 2217.46]; // C#6, E6, G#6, C#7
+
+                const sparkleGain = audioCtx.createGain();
+                // REDUCED VOLUME (Further lowered)
+                sparkleGain.gain.setValueAtTime(0, t);
+                sparkleGain.gain.setValueAtTime(0, t + 0.5); // Silent start
+                sparkleGain.gain.linearRampToValueAtTime(0.02, t + 2.5); // Was 0.05
+                sparkleGain.gain.exponentialRampToValueAtTime(0.001, t + 5.0);
+                sparkleGain.connect(audioCtx.destination);
+
+                sparkleFreqs.forEach((freq, i) => {
+                    const osc = audioCtx.createOscillator();
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(freq, t);
+
+                    // Very slow vibrato/drift
+                    osc.detune.setValueAtTime(0, t);
+                    osc.detune.linearRampToValueAtTime(15, t + 4.0);
+
+                    osc.connect(sparkleGain);
+                    osc.start(t);
+                    osc.stop(t + 6.0);
+                });
+            };
+
+            // 2. Preloader Appear Sound (Soft airy swoop)
+            window.playAppearSound = () => {
+                resumeAudio(); // Try to resume, might fail if no interaction
+                const t = audioCtx.currentTime;
+
+                // "Airy Swoosh" - White Noise Filter Sweep
+                const bufferSize = audioCtx.sampleRate * 2; // 2 seconds
+                const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+                const data = buffer.getChannelData(0);
+                for (let i = 0; i < bufferSize; i++) {
+                    data[i] = Math.random() * 2 - 1;
+                }
+
+                const noise = audioCtx.createBufferSource();
+                noise.buffer = buffer;
+
+                const noiseFilter = audioCtx.createBiquadFilter();
+                noiseFilter.type = 'lowpass';
+                noiseFilter.frequency.setValueAtTime(100, t);
+                noiseFilter.frequency.exponentialRampToValueAtTime(2000, t + 0.5); // Opening
+
+                const noiseGain = audioCtx.createGain();
+                noiseGain.gain.setValueAtTime(0, t);
+                noiseGain.gain.linearRampToValueAtTime(0.05, t + 0.1); // Quick fade in
+                noiseGain.gain.exponentialRampToValueAtTime(0.001, t + 0.5); // Tail
+
+                noise.connect(noiseFilter);
+                noiseFilter.connect(noiseGain);
+                noiseGain.connect(audioCtx.destination);
+                noise.start(t);
+
+                // "Sub Pop" - Low Sine Hit
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(100, t);
+                osc.frequency.exponentialRampToValueAtTime(40, t + 0.3); // Drop
+
+                gain.gain.setValueAtTime(0, t);
+                gain.gain.linearRampToValueAtTime(0.1, t + 0.05);
+                gain.gain.exponentialRampToValueAtTime(0.001, t + 0.3);
+
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start(t);
+                osc.stop(t + 0.4);
+            };
+
+            // Nav sounds removed as per instruction.
+        });
+
+        // Preloader Logic Restored (No Button)
+        window.addEventListener('load', function () {
+            const preloader = document.getElementById('preloader');
+
+            setTimeout(() => {
+                window.scrollTo(0, 0);
+                document.body.classList.add('loaded'); // Trigger entry animation
+                preloader.style.opacity = '0';
+
+                // Try playing automatically immediately after loading finishes
+                const startupAudio = new Audio('inicio.mp3');
+                startupAudio.currentTime = 4; // Empezar en el segundo 4
+                startupAudio.volume = 0.8;
+                let hasPlayed = false;
+
+                startupAudio.play().then(() => {
+                    hasPlayed = true;
+                }).catch(e => {
+                    // Si se bloquea, esperar a la primera interaccion del usuario
+                    const playOnInteract = () => {
+                        if (!hasPlayed) {
+                            startupAudio.play().catch(() => { });
+                            hasPlayed = true;
+                        }
+                        // Remover los listeners inmediatamente una vez que el usuario interactúa
+                        ['click', 'scroll', 'touchstart', 'keydown'].forEach(evt =>
+                            window.removeEventListener(evt, playOnInteract)
+                        );
+                    };
+
+                    ['click', 'scroll', 'touchstart', 'keydown'].forEach(evt =>
+                        window.addEventListener(evt, playOnInteract, { once: true })
+                    );
+                });
+
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 500);
+            }, 3000); // 3s total
+        });
+
+        // Mobile Menu Logic
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                const icon = menuToggle.querySelector('i');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            });
+
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    const icon = menuToggle.querySelector('i');
+                    icon.classList.add('fa-bars');
+                    icon.classList.remove('fa-times');
+                });
+            });
+        }
+
+        // --- HOVER AUDIO LOGIC ---
+        // Pre-create the audio object so it responds instantly
+        const hoverAudio = new Audio('opcion.mp3');
+        hoverAudio.volume = 0.5; // Slightly lower volume for UI interactions
+
+        // Select elements that should trigger the sound
+        const hoverElements = document.querySelectorAll('.paquete-card, .servicio-card, a, button');
+
+        hoverElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                // If it's already playing, reset to start to allow rapid fire
+                hoverAudio.currentTime = 0;
+                hoverAudio.play().catch(e => {
+                    // Browser policies might block this until user interacts
+                });
+            });
+        });
+
+        // --- GLITCH AUDIO LOGIC ---
+        const glitchAudio = new Audio('Glitch.mp3');
+        glitchAudio.volume = 0.6; // Volumen moderado para no aturdir
+
+        document.querySelectorAll('.paquete-card').forEach(card => {
+            let glitchTimer;
+
+            const scheduleGlitchSound = (delay) => {
+                glitchTimer = setTimeout(() => {
+                    glitchAudio.currentTime = 0;
+                    glitchAudio.play().catch(e => { }); // Ignorar si el navegador lo bloquea al inicio
+
+                    // El CSS tiene "2s infinite alternate". 
+                    // Esto significa que los siguientes fallos ocurren a los 1.8s, luego 2.2s, luego 1.8s...
+                    scheduleGlitchSound(delay === 1800 ? 2200 : 1800);
+                }, delay);
+            };
+
+            card.addEventListener('mouseenter', () => {
+                // El primer glitch en el CSS ocurre al 50% de 2 segundos = exactamente 1.0 segundo (1000ms)
+                scheduleGlitchSound(1000);
+            });
+
+            card.addEventListener('mouseleave', () => {
+                // Detener todo si el ratón sale
+                clearTimeout(glitchTimer);
+                glitchAudio.pause();
+                glitchAudio.currentTime = 0;
+            });
+        });
+    </script>
+</body>
+
+</html>
