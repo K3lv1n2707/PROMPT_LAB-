@@ -39,13 +39,11 @@ body {
     width: 100%;
     max-width: 100%;
     min-height: 100vh;
-    /* Ensure full height */
     /* Main background gradient only */
     background: radial-gradient(circle at 50% 0%, #111111 0%, #050505 80%);
     background-attachment: fixed;
-    /* Keeps gradient fast on scroll */
     position: relative;
-    /* Ensure ::before is relative to body */
+    z-index: 0; /* Creates an explicit stacking context */
 }
 
 /* Background Pattern - Right Side Only */
@@ -54,9 +52,9 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    z-index: -1;
+    z-index: 10; /* Bring it forward but still behind content that has higher z-index (header has 100, text handles own z) */
     overflow: hidden;
     pointer-events: none;
 }
@@ -81,15 +79,46 @@ body {
     }
 
     10% {
-        opacity: 0.4;
+        opacity: 0.5; /* Increased from 0.4 */
     }
 
     90% {
-        opacity: 0.4;
+        opacity: 0.5; /* Increased from 0.4 */
     }
 
     100% {
         transform: translateY(-100vh) translateX(50px) rotate(20deg);
+        opacity: 0;
+    }
+}
+
+.falling-symbol {
+    position: fixed; /* Keep them relative to the viewport so they are always visible */
+    color: var(--accent-primary);
+    font-family: monospace;
+    font-weight: bold;
+    opacity: 0;
+    user-select: none;
+    text-shadow: 0 0 15px var(--accent-primary); /* Much brighter glow */
+    animation: fallDown infinite linear;
+    top: -10vh; /* Start above viewport */
+    z-index: 5; /* Ensure they sit between background (0) and content (20) */
+    pointer-events: none; /* Make sure they don't block clicks */
+}
+
+@keyframes fallDown {
+    0% {
+        transform: translateY(0) rotate(-10deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.5; /* Reduced from 0.6 */
+    }
+    85% {
+        opacity: 0.5; /* Reduced from 0.6 */
+    }
+    100% {
+        transform: translateY(120vh) rotate(20deg); /* Fall past bottom */
         opacity: 0;
     }
 }
@@ -213,6 +242,8 @@ header {
     align-items: center;
     padding-top: 60px;
     /* Space for header */
+    position: relative;
+    z-index: 20;
 }
 
 .hero-container {
@@ -635,6 +666,8 @@ header {
 /* Sections General */
 section {
     padding: 4rem 0;
+    position: relative; /* Enables z-index stacking */
+    z-index: 20; /* Places sections above the falling symbols container */
 }
 
 .section-title {
@@ -1068,11 +1101,17 @@ body.loaded>footer {
 .paquete-card:hover .price-value,
 .paquete-card:hover .price-desde,
 .paquete-card:hover .price-calidad,
-.paquete-card:hover .feat-item {
+.paquete-card:hover .feat-item,
+.servicio-card:hover h3,
+.servicio-card:hover p,
+.servicio-card:hover .servicio-icon {
     animation: text-block-glitch 2s infinite alternate;
 }
 
 /* Stagger animations slightly so the cuadritos happen differently on elements */
+.servicio-card:hover .servicio-icon { animation-delay: 0.1s; }
+.servicio-card:hover h3 { animation-delay: 0.3s; }
+.servicio-card:hover p { animation-delay: 0.5s; }
 .paquete-card:hover .paquete-title { animation-delay: 0.2s; }
 .paquete-card:hover .price-value { animation-delay: 0.3s; }
 .paquete-card:hover .feat-item { animation-delay: 0.4s; }

@@ -42,7 +42,8 @@
                 <a href="#servicios">Servicios</a>
                 <a href="#paquetes">Paquetes</a>
                 <a href="#quienes-somos">Quiénes Somos</a>
-                <a href="#contacto">Contacto</a>
+                <a href="#chat-en-linea">Chat en línea</a>
+                <a href="#contacto">Redes</a>
             </nav>
             <div class="menu-actions">
                 <a href="https://wa.me/593969794784" target="_blank" class="btn-cta">SOLICITAR</a>
@@ -102,13 +103,6 @@
             <div class="hero-visual">
                 <!-- The glowing line effect -->
                 <div class="visual-glow-line"></div>
-
-                <!-- Silhouette/Figure placeholder -->
-                <div style="z-index:2; height:100%; display:flex; align-items:flex-end;">
-                    <!-- Simple silhouette shape logic via CSS or Image can go here -->
-                    <i class="fas fa-user"
-                        style="font-size:10rem; color:#000; filter:drop-shadow(0 0 10px rgba(190,243,44,0.5));"></i>
-                </div>
 
             </div>
 
@@ -369,16 +363,36 @@
         </div>
     </section>
 
-    <!-- Contacto Section -->
+    <!-- Chat en Línea Section -->
+    <section id="chat-en-linea" style="background: rgba(255,255,255,0.02);">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title" style="margin-bottom: 0;">CHAT EN <span>LÍNEA</span></h2>
+                <div class="section-underline"></div>
+            </div>
+
+            <div style="text-align:center; max-width:800px; margin:0 auto;">
+                <p style="font-size: 1.1rem; color: #fff; margin-bottom: 2rem; font-family: 'Courier New', monospace;">
+                    ¿Tienes dudas o quieres solicitar un servicio? Escríbenos directamente y te responderemos de
+                    inmediato.
+                </p>
+                <a href="https://wa.me/593969794784?text=Quisiera%20conocer%20sus%20servicios" target="_blank"
+                    class="btn-hero" style="font-size:1.1rem; padding: 1.2rem 3rem;">
+                    <i class="fab fa-whatsapp" style="font-size: 1.6rem;"></i> INICIAR CHAT
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Redes Section -->
     <section id="contacto">
         <div class="container contacto-container">
-            <h2 class="section-title">CONECTA CON <span>NOSOTROS</span></h2>
-            <p>¿Listo para innovar? Síguenos en nuestras redes o escríbenos.</p>
+            <h2 class="section-title">NUESTRAS <span>REDES</span></h2>
+            <p>¿Listo para innovar? Síguenos en nuestras redes sociales.</p>
 
             <div class="social-buttons">
                 <a href="https://wa.me/593969794784" target="_blank" class="social-btn"><i
                         class="fab fa-whatsapp"></i></a>
-                <a href="https://facebook.com" target="_blank" class="social-btn"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://www.instagram.com/promptlabgye/?e=205e5b0e-cd8b-479e-a3c0-9f92a6dde452&g=5"
                     target="_blank" class="social-btn"><i class="fab fa-instagram"></i></a>
                 <a href="https://tiktok.com" target="_blank" class="social-btn"><i class="fab fa-tiktok"></i></a>
@@ -463,8 +477,24 @@
             // Preloader: full, immediate
             spawnSymbols('preloader-bg', 35, false, 0.5);
 
-            // Home: right side only, delayed to reveal after preloader
-            spawnSymbols('floating-bg', 25, true, 2.8);
+            // Home: falling symbols from above
+            function spawnFallingSymbols(count) {
+                // Append directly to body to avoid clipping or fixed-context issues
+                for (let i = 0; i < count; i++) {
+                    const span = document.createElement('span');
+                    span.classList.add('falling-symbol');
+                    span.textContent = '>_';
+                    const sizeRem = 0.8 + Math.random() * 1.5;
+                    span.style.fontSize = `${sizeRem}rem`;
+                    span.style.left = `${Math.random() * 100}%`;
+                    const duration = 10 + Math.random() * 20;
+                    span.style.animationDuration = `${duration}s`;
+                    // Wait a bit before the rain starts, then stagger them naturally
+                    span.style.animationDelay = `${3 + Math.random() * 10}s`; 
+                    document.body.appendChild(span);
+                }
+            }
+            spawnFallingSymbols(40);
 
             /* --- PS5 Audio Audio System --- */
             const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -664,12 +694,32 @@
                 icon.classList.toggle('fa-times');
             });
 
-            navLinks.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    navLinks.classList.remove('active');
-                    const icon = menuToggle.querySelector('i');
-                    icon.classList.add('fa-bars');
-                    icon.classList.remove('fa-times');
+            // Smooth Scrolling Logic for Nav Links
+            document.querySelectorAll('.nav-links a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        // Close mobile menu if it's open
+                        navLinks.classList.remove('active');
+                        if (menuToggle) {
+                            const icon = menuToggle.querySelector('i');
+                            icon.classList.add('fa-bars');
+                            icon.classList.remove('fa-times');
+                        }
+
+                        // Calculate position accounting for the fixed header
+                        const headerOffset = 80;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
                 });
             });
         }
@@ -696,7 +746,7 @@
         const glitchAudio = new Audio('Glitch.mp3');
         glitchAudio.volume = 0.6; // Volumen moderado para no aturdir
 
-        document.querySelectorAll('.paquete-card').forEach(card => {
+        document.querySelectorAll('.paquete-card, .servicio-card').forEach(card => {
             let glitchTimer;
 
             const scheduleGlitchSound = (delay) => {
